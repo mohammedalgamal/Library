@@ -1,1 +1,28 @@
-/*# sourceMappingURL=main.css.map */
+* {
+  box-sizing: border-box;
+  padding: 0;
+  margin: 0;
+}
+
+body {
+  background-color: rgb(56, 56, 56);
+}
+body .footer {
+  width: 100vw;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+body .footer .text {
+  color: rgb(233, 232, 217);
+  font-size: 20px;
+}
+body .footer .text a img {
+  height: 25px;
+  margin-bottom: 5px;
+  margin-left: 8px;
+  width: auto;
+}
+body .footer .text a img:hover {
+  transform: scale(1.2);
+}/*# sourceMappingURL=main.css.map */
