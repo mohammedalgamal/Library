@@ -7,6 +7,36 @@
 body {
   background-color: rgb(56, 56, 56);
 }
+body .header {
+  background-color: black;
+  width: 100vw;
+  height: 4.5rem;
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+  flex-wrap: wrap;
+}
+@media (max-width: 333px) {
+  body .header {
+    height: 7rem;
+  }
+}
+body .header .title {
+  color: rgb(233, 232, 217);
+  font-size: 2rem;
+  font-weight: 700;
+}
+body .header .button .main-btn {
+  color: rgb(233, 232, 217);
+  font-size: 1.5rem;
+  font-weight: 500;
+  width: 10rem;
+  height: 3rem;
+}
+body .header .button .main-btn:hover {
+  color: black;
+  background-color: rgb(155, 140, 140);
+}
 body .footer {
   width: 100vw;
   display: flex;
@@ -16,6 +46,11 @@ body .footer {
 body .footer .text {
   color: rgb(233, 232, 217);
   font-size: 20px;
+}
+@media (max-width: 333px) {
+  body .footer .text {
+    font-size: 15px;
+  }
 }
 body .footer .text a img {
   height: 25px;

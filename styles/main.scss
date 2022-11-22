@@ -10,6 +10,42 @@
 body {
     background-color: $bgc;
 
+    .header {
+        background-color: black;
+        width: 100vw;
+        height: 4.5rem;
+        display: flex;
+        align-items: center;
+        justify-content: space-around;
+        flex-wrap: wrap;
+
+        @media (max-width: 333px) {
+                height: 7rem;
+        }
+
+        .title {
+            color: $text_color;
+            font-size: 2rem;
+            font-weight: 700;
+        }
+
+        .button {
+
+            .main-btn {
+                color: $text_color;
+                font-size: 1.5rem;
+                font-weight: 500;
+                width: 10rem;
+                height: 3rem;
+            }
+            
+            .main-btn:hover {
+                color: black;
+                background-color: rgb(155, 140, 140);
+            }
+        }
+    }
+
     .footer {
         width: 100vw;
         display: flex;
@@ -20,6 +56,10 @@ body {
         .text {
             color: $text_color;
             font-size: 20px;
+
+            @media (max-width: 333px) {
+                font-size: 15px;
+            }
 
             a {
                 img {
