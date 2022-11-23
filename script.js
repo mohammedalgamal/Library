@@ -19,6 +19,7 @@ addBookToLibrary(book1);
 
 let book2 = new Book('the beauty and the beast', 'mohammed megahed', 654);
 addBookToLibrary(book2);
+addBookToLibrary(book2);addBookToLibrary(book2);addBookToLibrary(book2);addBookToLibrary(book2);addBookToLibrary(book2);addBookToLibrary(book2);addBookToLibrary(book2);addBookToLibrary(book2);addBookToLibrary(book2);
 
 
 function displayBooks() {
@@ -27,18 +28,19 @@ function displayBooks() {
     for (let i = 0; i < myLibrary.length; i++) {
         let main_div = document.createElement('div');
         main_div.className = 'cards';
+        main_div.classList += ' shadow-lg'
 
         let title_div = document.createElement('div');
         title_div.className = 'title-div';
-        title_div.innerText = myLibrary[i].title;
+        title_div.innerText = `"${myLibrary[i].title}"`;
 
         let author_div = document.createElement('div');
         author_div.className = 'author-div';
-        author_div.innerText = myLibrary[i].author;
+        author_div.innerText = `By: ${myLibrary[i].author}`;
 
         let pages_div = document.createElement('div');
         pages_div.className = 'pages-div';
-        pages_div.innerText = myLibrary[i].pages;
+        pages_div.innerText = `${myLibrary[i].pages} pages`;
 
         let read_button = document.createElement('button');
         read_button.className = 'read-btn';
