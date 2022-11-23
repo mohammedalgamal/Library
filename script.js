@@ -19,7 +19,7 @@ addBookToLibrary(book1);
 
 let book2 = new Book('the beauty and the beast', 'mohammed megahed', 654);
 addBookToLibrary(book2);
-addBookToLibrary(book2);addBookToLibrary(book2);addBookToLibrary(book2);addBookToLibrary(book2);addBookToLibrary(book2);addBookToLibrary(book2);addBookToLibrary(book2);addBookToLibrary(book2);addBookToLibrary(book2);
+//addBookToLibrary(book2);addBookToLibrary(book2);addBookToLibrary(book2);addBookToLibrary(book2);addBookToLibrary(book2);addBookToLibrary(book2);addBookToLibrary(book2);addBookToLibrary(book2);addBookToLibrary(book2);
 
 
 function displayBooks() {

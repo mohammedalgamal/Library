@@ -130,7 +130,7 @@ body {
         z-index: 2;
         width: 100vw;
         height: 100vh;
-        background-color: rgba(0, 0, 0, 0.593);
+        background-color: rgba(0, 0, 0, 0.5);
     }
 
     .form {
@@ -140,8 +140,32 @@ body {
         z-index: 3;
         width: 300px;
         height: 400px;
-        background-color: aliceblue;
+        background-color: rgb(100, 100, 100);
+        text-align: center;
+        padding: 15px;
+        color: $text_color;
+        border-radius: 8px;
         transform: translate(-50%, -50%) scale(0);
+        transition: 0.2s ease-in-out;
+
+        div {
+            margin-bottom: 20px;
+        }
+
+        .title {
+            font-weight: 700;
+        }
+
+        .form-check {
+            position: relative;
+            .form-check-input {
+                position: absolute;
+            }
+        }
+
+        .btn {
+            width: 100%;
+        }
     }
 
     .form.visible {
