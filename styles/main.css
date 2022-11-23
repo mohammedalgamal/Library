@@ -7,6 +7,7 @@
 body {
   background-color: rgb(56, 56, 56);
   min-height: 100vh;
+  min-width: 100vw;
   display: flex;
   flex-direction: column;
 }
@@ -45,12 +46,12 @@ body .content {
   display: grid;
   justify-content: center;
   gap: 40px;
-  margin: 0 auto;
+  margin: 0 clamp(1vw, 20px, 2vw);
   margin-top: 30px;
   margin-bottom: 10px;
   grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
 }
-body .cards {
+body .content .cards {
   background-color: rgb(26, 26, 26);
   border-radius: 8px;
   display: flex;
@@ -59,22 +60,22 @@ body .cards {
   gap: 12px;
   z-index: 1;
 }
-body .cards div {
+body .content .cards div {
   align-self: center;
   color: rgb(233, 232, 217);
 }
-body .cards button {
+body .content .cards button {
   border-radius: 8px;
   height: 2.5rem;
   font-weight: 500;
 }
-body .cards button:hover {
+body .content .cards button:hover {
   filter: brightness(85%);
 }
-body .cards .finished-btn {
+body .content .cards .finished-btn {
   background-color: rgb(103, 221, 103);
 }
-body .cards .not-finished-btn {
+body .content .cards .not-finished-btn {
   background-color: rgb(250, 119, 119);
 }
 body .footer {
@@ -101,4 +102,24 @@ body .footer .text a img {
 }
 body .footer .text a img:hover {
   transform: scale(1.2);
+}
+body .bg.visible {
+  position: fixed;
+  z-index: 2;
+  width: 100vw;
+  height: 100vh;
+  background-color: rgba(0, 0, 0, 0.593);
+}
+body .form {
+  position: fixed;
+  left: 50%;
+  top: 50%;
+  z-index: 3;
+  width: 300px;
+  height: 400px;
+  background-color: aliceblue;
+  transform: translate(-50%, -50%) scale(0);
+}
+body .form.visible {
+  transform: translate(-50%, -50%) scale(1);
 }/*# sourceMappingURL=main.css.map */

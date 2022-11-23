@@ -25,6 +25,7 @@ addBookToLibrary(book2);addBookToLibrary(book2);addBookToLibrary(book2);addBookT
 function displayBooks() {
     // Displays each book in myLibrary
     const cont = document.querySelector('.content');
+    cont.innerHTML = '';
     for (let i = 0; i < myLibrary.length; i++) {
         let main_div = document.createElement('div');
         main_div.className = 'cards';
@@ -63,7 +64,18 @@ function displayBooks() {
         main_div.appendChild(read_button);
         main_div.appendChild(delete_button);
         cont.appendChild(main_div);
+
     }
 };
 
+function addBooks() {
+    // Adds functionality to "Add book" button
+    const add_btn = document.querySelector('.main-btn');
+    add_btn.addEventListener('click', (e) => {
+        displayBooks();
+    });
+};
+
+
 displayBooks();
+//addBooks();
