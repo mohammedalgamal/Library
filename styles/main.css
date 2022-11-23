@@ -9,7 +9,6 @@ body {
   min-height: 100vh;
   display: flex;
   flex-direction: column;
-  justify-items: center;
 }
 body .header {
   background-color: black;
@@ -41,15 +40,17 @@ body .header .button .main-btn:hover {
   color: black;
   background-color: rgb(155, 140, 140);
 }
-body .content {
-  max-width: 94vw;
+body .container {
+  margin-top: 30px;
+  margin-bottom: 10px;
+}
+body .container .content {
   display: grid;
   justify-content: center;
   gap: 40px;
-  margin: 30px 2vw 10px 2vw;
   grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
 }
-body .cards {
+body .container .cards {
   background-color: rgb(26, 26, 26);
   border-radius: 8px;
   display: flex;
@@ -58,22 +59,22 @@ body .cards {
   gap: 12px;
   z-index: 1;
 }
-body .cards div {
+body .container .cards div {
   align-self: center;
   color: rgb(233, 232, 217);
 }
-body .cards button {
+body .container .cards button {
   border-radius: 8px;
   height: 2.5rem;
   font-weight: 500;
 }
-body .cards button:hover {
+body .container .cards button:hover {
   filter: brightness(85%);
 }
-body .cards .finished-btn {
+body .container .cards .finished-btn {
   background-color: rgb(103, 221, 103);
 }
-body .cards .not-finished-btn {
+body .container .cards .not-finished-btn {
   background-color: rgb(250, 119, 119);
 }
 body .footer {
