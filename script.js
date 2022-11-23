@@ -71,11 +71,19 @@ function displayBooks() {
 function addBooks() {
     // Adds functionality to "Add book" button
     const add_btn = document.querySelector('.main-btn');
+    const background = document.querySelector('.bg');
+    const form = document.querySelector('.form');
     add_btn.addEventListener('click', (e) => {
+        background.classList += ' visible';
+        form.classList += ' visible';
         displayBooks();
+    });
+    background.addEventListener('click', (e) => {
+        background.classList.remove('visible');
+        form.classList.remove('visible');
     });
 };
 
 
 displayBooks();
-//addBooks();
+addBooks();
