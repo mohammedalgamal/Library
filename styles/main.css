@@ -40,17 +40,17 @@ body .header .button .main-btn:hover {
   color: black;
   background-color: rgb(155, 140, 140);
 }
-body .container {
-  margin-top: 30px;
-  margin-bottom: 10px;
-}
-body .container .content {
+body .content {
+  max-width: 96vw;
   display: grid;
   justify-content: center;
   gap: 40px;
+  margin: 0 auto;
+  margin-top: 30px;
+  margin-bottom: 10px;
   grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
 }
-body .container .cards {
+body .cards {
   background-color: rgb(26, 26, 26);
   border-radius: 8px;
   display: flex;
@@ -59,22 +59,22 @@ body .container .cards {
   gap: 12px;
   z-index: 1;
 }
-body .container .cards div {
+body .cards div {
   align-self: center;
   color: rgb(233, 232, 217);
 }
-body .container .cards button {
+body .cards button {
   border-radius: 8px;
   height: 2.5rem;
   font-weight: 500;
 }
-body .container .cards button:hover {
+body .cards button:hover {
   filter: brightness(85%);
 }
-body .container .cards .finished-btn {
+body .cards .finished-btn {
   background-color: rgb(103, 221, 103);
 }
-body .container .cards .not-finished-btn {
+body .cards .not-finished-btn {
   background-color: rgb(250, 119, 119);
 }
 body .footer {

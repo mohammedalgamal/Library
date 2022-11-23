@@ -49,50 +49,47 @@ body {
         }
     }
 
-
-    .container {
+    .content {
+        max-width: 96vw;
+        display: grid;
+        justify-content: center;
+        gap: 40px;
+        margin: 0 auto;
         margin-top: 30px;
         margin-bottom: 10px;
+        grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+    }
 
-
-        .content {
-            display: grid;
-            justify-content: center;
-            gap: 40px;
-            grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+    .cards {
+        background-color: rgb(26, 26, 26);
+        border-radius: 8px;
+        display: flex;
+        flex-direction: column;
+        padding: 12px;
+        gap: 12px;
+        z-index: 1;
+        
+        div {
+            align-self: center;
+            color: $text_color;
         }
 
-        .cards {
-            background-color: rgb(26, 26, 26);
+        button {
             border-radius: 8px;
-            display: flex;
-            flex-direction: column;
-            padding: 12px;
-            gap: 12px;
-            z-index: 1;
-            
-            div {
-                align-self: center;
-                color: $text_color;
-            }
+            height: 2.5rem;
+            font-weight: 500;
+        }
 
-            button {
-                border-radius: 8px;
-                height: 2.5rem;
-                font-weight: 500;
-            }
+        button:hover {
+            filter: brightness(85%);
+        }
 
-            button:hover {
-                filter: brightness(85%);
-            }
+        .finished-btn {
+            background-color: rgb(103, 221, 103);
+        }
 
-            .finished-btn {
-                background-color: rgb(103, 221, 103);
-            }
-
-            .not-finished-btn {
-                background-color: rgb(250, 119, 119);
-            }
+        .not-finished-btn {
+            background-color: rgb(250, 119, 119);
         }
     }
 
