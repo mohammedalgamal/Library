@@ -13,6 +13,11 @@ function addBookToLibrary(book) {
     myLibrary.push(book);
 };
 
+var book1 = new Book('aa', 'aa', 123, true);
+addBookToLibrary(book1);
+addBookToLibrary(book1);
+addBookToLibrary(book1);
+
 function displayBooks() {
     // Displays each book in myLibrary
     const cont = document.querySelector('.content');
@@ -20,7 +25,7 @@ function displayBooks() {
     for (let i = 0; i < myLibrary.length; i++) {
         let main_div = document.createElement('div');
         main_div.className = 'cards';
-        main_div.classList += ' shadow-lg'
+        main_div.classList += ' shadow-lg';
 
         let title_div = document.createElement('div');
         title_div.className = 'title-div';
@@ -39,14 +44,17 @@ function displayBooks() {
         if (myLibrary[i].read) {
             read_button.innerText = 'Read';
             read_button.classList += ' finished-btn';
+            read_button.id = `read${i}`;
         }
         else {
             read_button.innerText = 'Not read';
             read_button.classList += ' not-finished-btn';
+            read_button.id = `read${i}`;
         };
 
         let delete_button = document.createElement('button');
         delete_button.className = 'delete-btn';
+        delete_button.id = `delete${i}`;
         delete_button.innerText = 'Delete';
 
         main_div.appendChild(title_div);
@@ -55,8 +63,8 @@ function displayBooks() {
         main_div.appendChild(read_button);
         main_div.appendChild(delete_button);
         cont.appendChild(main_div);
-
-    }
+    };
+    deleteBook();
 };
 
 function addBooks() {
@@ -76,7 +84,6 @@ function addBooks() {
 
 };
 
-
 function getFormData() {
     var title = document.querySelector('#title').value;
     var author = document.querySelector('#author').value;
@@ -86,7 +93,6 @@ function getFormData() {
     var newBook = new Book(title, author, pages, read);
     addBookToLibrary(newBook);
     displayBooks();
-    console.log(myLibrary);
 };
 
 function removeForm()  {
@@ -102,6 +108,17 @@ function removeForm()  {
     form.classList.remove('visible');
 };
 
+function deleteBook() {
+    var allButtons = document.querySelectorAll('button[id^=delete]');
+    for (var i = 0; i < allButtons.length; i++) {
+        allButtons[i].addEventListener('click', (e) => {
+          myLibrary.splice(Number(e.target.id[6]), 1);
+          displayBooks();  
+        });
+      };
+};
+
 
 displayBooks();
 addBooks();
+    
