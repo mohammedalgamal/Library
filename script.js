@@ -8,7 +8,6 @@ function Book(title, author, pages, read=false) {
     this.read = read;
 };
 
-
 function addBookToLibrary(book) {
     // Adds books to myLibrary
     myLibrary.push(book);
@@ -93,6 +92,11 @@ function getFormData() {
 function removeForm()  {
     const background = document.querySelector('.bg');
     const form = document.querySelector('.form');
+
+    document.querySelector('#title').value = '';
+    document.querySelector('#author').value = '';
+    document.querySelector('#pages').value = '';
+    document.querySelector('#read').checked = false;
 
     background.classList.remove('visible');
     form.classList.remove('visible');
