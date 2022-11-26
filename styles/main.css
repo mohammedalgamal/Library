@@ -11,6 +11,15 @@ body {
   display: flex;
   flex-direction: column;
 }
+body button, body input[type=submit], body input[type=reset] {
+  background: none;
+  color: inherit;
+  border: none;
+  padding: 0;
+  font: inherit;
+  cursor: pointer;
+  outline: inherit;
+}
 body .header {
   background-color: black;
   width: 100vw;
@@ -78,6 +87,9 @@ body .content .cards .finished-btn {
 body .content .cards .not-finished-btn {
   background-color: rgb(250, 119, 119);
 }
+body .content .cards .delete-btn {
+  background-color: #fff;
+}
 body .footer {
   width: 100vw;
   display: flex;
@@ -125,8 +137,11 @@ body .form {
   transform: translate(-50%, -50%) scale(0);
   transition: 0.2s ease-in-out;
 }
-body .form div {
-  margin-bottom: 8%;
+body .form form {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  align-items: stretch;
 }
 body .form .title {
   font-weight: 700;
