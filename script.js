@@ -14,14 +14,6 @@ function addBookToLibrary(book) {
     myLibrary.push(book);
 };
 
-let book1 = new Book('the mesribles', 'martin luthor', 750, true);
-addBookToLibrary(book1);
-
-let book2 = new Book('the beauty and the beast', 'mohammed megahed', 654);
-addBookToLibrary(book2);
-//addBookToLibrary(book2);addBookToLibrary(book2);addBookToLibrary(book2);addBookToLibrary(book2);addBookToLibrary(book2);addBookToLibrary(book2);addBookToLibrary(book2);addBookToLibrary(book2);addBookToLibrary(book2);
-
-
 function displayBooks() {
     // Displays each book in myLibrary
     const cont = document.querySelector('.content');
