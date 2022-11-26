@@ -8,15 +8,14 @@ function Book(title, author, pages, read=false) {
     this.read = read;
 };
 
+Book.prototype.changeRead = function() {
+    this.read = !this.read;
+};
+
 function addBookToLibrary(book) {
     // Adds books to myLibrary
     myLibrary.push(book);
 };
-
-var book1 = new Book('aa', 'aa', 123, true);
-addBookToLibrary(book1);
-addBookToLibrary(book1);
-addBookToLibrary(book1);
 
 function displayBooks() {
     // Displays each book in myLibrary
@@ -65,6 +64,7 @@ function displayBooks() {
         cont.appendChild(main_div);
     };
     deleteBook();
+    toggleRead();
 };
 
 function addBooks() {
@@ -118,6 +118,15 @@ function deleteBook() {
       };
 };
 
+function toggleRead() {
+    var allButtons = document.querySelectorAll('button[id^=read]');
+    for (var i = 0; i < allButtons.length; i++) {
+        allButtons[i].addEventListener('click', (e) => {
+          myLibrary[Number(e.target.id[4])].changeRead();
+          displayBooks();  
+        });
+    };
+}
 
 displayBooks();
 addBooks();
