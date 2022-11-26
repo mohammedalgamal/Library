@@ -73,15 +73,37 @@ function addBooks() {
     const add_btn = document.querySelector('.main-btn');
     const background = document.querySelector('.bg');
     const form = document.querySelector('.form');
+
     add_btn.addEventListener('click', (e) => {
         background.classList += ' visible';
         form.classList += ' visible';
-        displayBooks();
     });
     background.addEventListener('click', (e) => {
         background.classList.remove('visible');
         form.classList.remove('visible');
     });
+
+};
+
+
+function getFormData() {
+    var title = document.querySelector('#title').value;
+    var author = document.querySelector('#author').value;
+    var pages = document.querySelector('#pages').value;
+    var read = document.querySelector('#read').checked;
+
+    var newBook = new Book(title, author, pages, read);
+    addBookToLibrary(newBook);
+    displayBooks();
+    console.log(myLibrary);
+};
+
+function removeForm()  {
+    const background = document.querySelector('.bg');
+    const form = document.querySelector('.form');
+
+    background.classList.remove('visible');
+    form.classList.remove('visible');
 };
 
 
