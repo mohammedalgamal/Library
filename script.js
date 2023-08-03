@@ -114,18 +114,18 @@ function deleteBook() {
     var allButtons = document.querySelectorAll('button[id^=delete]');
     for (var i = 0; i < allButtons.length; i++) {
         allButtons[i].addEventListener('click', (e) => {
-          myLibrary.splice(Number(e.target.id[6]), 1);
-          displayBooks();  
+        myLibrary.splice(Number(e.target.id[6]), 1);
+        displayBooks();  
         });
-      };
+    };
 };
 
 function toggleRead() {
     var allButtons = document.querySelectorAll('button[id^=read]');
     for (var i = 0; i < allButtons.length; i++) {
         allButtons[i].addEventListener('click', (e) => {
-          myLibrary[Number(e.target.id[4])].changeRead();
-          displayBooks();  
+        myLibrary[Number(e.target.id[4])].changeRead();
+        displayBooks();  
         });
     };
 }
