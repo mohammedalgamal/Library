@@ -21,6 +21,7 @@ function addBookToLibrary(book) {
 
 function displayBooks() {
     // Displays each book in myLibrary
+    // test
     const cont = document.querySelector('.content');
     cont.innerHTML = '';
     for (let i = 0; i < myLibrary.length; i++) {
